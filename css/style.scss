@@ -89,7 +89,10 @@ h2 {
         }
     }
 }
-
+.searchBlock-wrapper {
+  display: none;
+  margin-left: 20px;
+}
 // header 
 .header {
     background: #F9F9F9;
@@ -110,7 +113,7 @@ h2 {
         justify-self: center;
         max-width: 500px;
         margin-right: 20px;
-        margin-left: 20px;
+        margin-left: 0px;
     }
 
     &__nav {
@@ -168,7 +171,6 @@ h2 {
         margin-bottom: -2px;
     }
 }
-
 .searchBlock {
     display: flex;
     align-items: center;
@@ -555,6 +557,9 @@ h2 {
     flex-direction: column;
     color: $font-black;
     max-width: 400px;
+    @media (min-width: 1200px) and (max-width: 1430px) {
+      box-shadow: 0px 5px 20px -10px rgb(184 184 184 / 12%);
+    }
     @media (max-width: $md) {
       max-width: 100%;
     }
@@ -690,7 +695,7 @@ h2 {
         padding-bottom: 90px;
         padding-right: 100px;
         padding-left: 100px;
-        background: url(../../img/centerBanner-bg.png);
+        background: url(../img/centerBanner-bg.png);
         border-radius: 24px;
     }
 
@@ -803,6 +808,16 @@ h2 {
             // overflow: unset;
         }
     }
+    @media (max-width: 1200px) {
+      &__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 20px;
+        padding: 0px 15px;
+      }
+    }
+    
 }
 
 .reviewItem {
@@ -1600,13 +1615,13 @@ $font-black: #151515;
       }
     }
 
-    &__arrows {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 0px 15px;
-      margin-top: 20px;
-    }
+    // &__arrows {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: flex-end;
+    //   padding: 0px 15px;
+    //   margin-top: 20px;
+    // }
   }
 
   .revSlider {
@@ -1633,6 +1648,14 @@ $font-black: #151515;
       &:nth-child(2) {
         display: none;
       }
+    }
+  }
+
+  .searchBlock-wrapper {
+    margin-left: 0;
+    .searchBlock {
+      margin-right: 0;
+      max-width: 380px;
     }
   }
 

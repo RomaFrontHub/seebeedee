@@ -18,9 +18,10 @@ $(document).ready(() => {
     $('.cover').removeClass('cover--visible')
   })
 
-  // $('.header__searchToggler').click(function() {
-  //   $('.header__searchBlock').toggleClass('header__searchBlock--open')
-  // })
+  $('.header__searchToggler').click(function() {
+    // $('.header__searchBlock').removeClass('.searchBlock-hidden');
+    $('.searchBlock-wrapper').slideToggle();
+  })
 
   $('.bestSlider__body').slick({
     slidesToShow: 4,
@@ -81,7 +82,7 @@ $(document).ready(() => {
     nextArrow: '<a href="javascript://" class="sliderArrow sliderArrow--next"><span class="icon-arrow"></span></a>',
     responsive: [
       {
-        breakpoint: 1430,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           appendArrows: $('.revSlider__arrows')

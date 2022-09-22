@@ -612,6 +612,11 @@ h2 {
   text-decoration: underline;
 }
 
+.searchBlock-wrapper {
+  display: none;
+  margin-left: 20px;
+}
+
 .header {
   background: #F9F9F9;
 }
@@ -638,7 +643,7 @@ h2 {
       justify-self: center;
   max-width: 500px;
   margin-right: 20px;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 .header__nav {
   display: -webkit-box;
@@ -1148,6 +1153,12 @@ h2 {
   color: #151515;
   max-width: 400px;
 }
+@media (min-width: 1200px) and (max-width: 1430px) {
+  .itemCard {
+    -webkit-box-shadow: 0px 5px 20px -10px rgba(184, 184, 184, 0.12);
+            box-shadow: 0px 5px 20px -10px rgba(184, 184, 184, 0.12);
+  }
+}
 @media (max-width: 767.98px) {
   .itemCard {
     max-width: 100%;
@@ -1297,7 +1308,7 @@ h2 {
   padding-bottom: 90px;
   padding-right: 100px;
   padding-left: 100px;
-  background: url(../../img/centerBanner-bg.png);
+  background: url(../img/centerBanner-bg.png);
   border-radius: 24px;
 }
 .centerBanner__text {
@@ -1402,6 +1413,21 @@ h2 {
 .revSlider__body .slick-list {
   margin-right: 50px;
   margin-left: 50px;
+}
+@media (max-width: 1200px) {
+  .revSlider__arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 20px;
+    padding: 0px 15px;
+  }
 }
 
 .reviewItem {
@@ -2192,19 +2218,6 @@ h2 {
   .revSlider__body .slick-list {
     margin: 0;
   }
-  .revSlider__arrows {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    padding: 0px 15px;
-    margin-top: 20px;
-  }
 
   .revSlider__wrap {
     padding-top: 40px;
@@ -2223,6 +2236,14 @@ h2 {
   }
   .topOverlay p:nth-child(2) {
     display: none;
+  }
+
+  .searchBlock-wrapper {
+    margin-left: 0;
+  }
+  .searchBlock-wrapper .searchBlock {
+    margin-right: 0;
+    max-width: 380px;
   }
 
   .partners__item {
