@@ -22,50 +22,6 @@ $(document).ready(() => {
     $('.searchBlock-wrapper').slideToggle();
   })
 
-  var rangeInput2 = document.querySelector('.js-price-range-slider-2');
-
-  noUiSlider.create(rangeInput2, {
-    start: [ WGR.filterPriceRangeMin, WGR.filterPriceRangeMax ],
-    connect: true,
-    behaviour: 'snap',
-    cssPrefix: 'range-slider-',
-    range: {
-      'min': [ WGR.filterPriceRangeMin ],
-      'max': [ WGR.filterPriceRangeMax ]
-    }
-  });
-
-  //View
-  let productsGrid = document.querySelector('.main-products__grid');
-  let productsList = document.querySelector('.main-products__list');
-  let gridBtn = document.querySelector('.view-grid');
-  let listBtn = document.querySelector('.view-list');
-
-  listBtn.addEventListener('click', function() {
-    productsList.style.display = "flex";
-    productsGrid.style.display = "none";
-    gridBtn.classList.remove("view-active");
-    listBtn.classList.add("view-active");
-  });
-  gridBtn.addEventListener('click', function() {
-    productsList.style.display = "none";
-    productsGrid.style.display = "grid";
-    listBtn.classList.remove("view-active");
-    gridBtn.classList.add("view-active");
-  });
-
-  //Filters
-  const openBtn = document.querySelector(".filter-adaptive");
-  const closeBtn = document.querySelector(".close-btn");
-  const sidebar = document.querySelector(".main-filter");
-
-  openBtn.addEventListener("click", function () {
-    sidebar.classList.add("show-filter");
-  });
-  closeBtn.addEventListener("click", function () {
-    sidebar.classList.remove("show-filter");
-  });
-
   $('.bestSlider__body').slick({
     slidesToShow: 4,
     arrows: true,
@@ -146,6 +102,5 @@ $(document).ready(() => {
   $('.faqBlock__heading').click(function(){
     $(this).closest('.faqBlock__item').children('p').slideToggle();
     $(this).children('.faqBlock__plus').toggleClass('faqBlock__plus--minus');
-  })
-
-})
+  });
+});
