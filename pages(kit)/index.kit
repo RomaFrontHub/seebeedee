@@ -15,6 +15,8 @@
     <div class="all">
       <div class="cover"></div>
 
+      <!--@import "../includes/popup"  -->
+
       <!-- top overlay -->
       <div class="topOverlay">
           <div class="wrap topOverlay__wrap">
@@ -40,7 +42,7 @@
                 <span class="icon-user"></span>
             </a>
 
-            <a href="javascript://" class="header__navItem cartToggler header__cartToggler">
+            <a href="javascript://" class="header__navItem cartToggler header__cartToggler click-modal">
                 <span class="icon-basket"></span>
                 <span class="cartToggler__label">4</span>
             </a>
@@ -1002,5 +1004,46 @@
     <script src="js/dropkick.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', start);
+      function start() {
+        var btnInc = document.querySelectorAll('.btn-inc');
+        var btnDesc = document.querySelectorAll('.btn-desc');
+        var counterValue = document.querySelectorAll('.counter-value');
+        // attach event listener
+        for (let i = 0; i < counterValue.length; i++) {
+          btnInc[i].addEventListener('click', function() {
+            var value = +counterValue[i].value;
+            var max = + counterValue[i].max;
+            if (value < max) {
+              counterValue[i].value = value + 1;
+            }
+          });
+        }
+        for (let i = 0; i < counterValue.length; i++) {
+          btnDesc[i].addEventListener('click', function() {
+            var value = +counterValue[i].value;
+            var min = + counterValue[i].min;
+            if (value > min) {
+              counterValue[i].value = value - 1;
+            }
+          });
+        }
+      }
+
+      //delete
+      let deleteItem = document.querySelectorAll(".delete-item");
+      let popupItem = document.querySelectorAll(".popup-main__item");
+
+      for (let i = 0; i < deleteItem.length; i++) {
+        deleteItem[i].addEventListener("click", function() {
+          popupItem[i].style.display = "none";
+        });
+      }
+
+      //height
+      let computedHeight = getComputedStyle(document.querySelector('.all'));
+      document.querySelector('.popup-bg').style.height = computedHeight.height;
+    </script>
   </body>
 </html>

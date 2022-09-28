@@ -518,6 +518,16 @@
         });
       }
 
+      //delete
+      let deleteItem = document.querySelectorAll(".delete-item");
+      let popupItem = document.querySelectorAll(".popup-main__item");
+
+      for (let i = 0; i < deleteItem.length; i++) {
+        deleteItem[i].addEventListener("click", function() {
+          popupItem[i].style.display = "none";
+        });
+      }
+
       //Options
       let optionOne = document.querySelector('.event-option-one');
       let optionTwo = document.querySelector('.event-option-two');
@@ -593,6 +603,10 @@
           content.classList.remove("content-fade");
         }
       });
+
+      //height
+      let computedHeight = getComputedStyle(document.querySelector('.all'));
+      document.querySelector('.popup-bg').style.height = computedHeight.height;
     </script>
   </body>
 </html>

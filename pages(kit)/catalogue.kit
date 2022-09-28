@@ -1208,6 +1208,38 @@
     </script>
     <script src="js/main.js"></script>
     <script>
+      document.addEventListener('DOMContentLoaded', start);
+      function start() {
+        var btnInc = document.querySelector('.btn-inc');
+        var btnDesc = document.querySelector('.btn-desc');
+        var counterValue = document.querySelector('.counter-value');
+        // attach event listener
+        btnInc.addEventListener('click', function() {
+          var value = +counterValue.value;
+          var max = + counterValue.max;
+          if (value < max) {
+            counterValue.value = value + 1;
+          }
+        });
+        btnDesc.addEventListener('click', function() {
+          var value = +counterValue.value;
+          var min = + counterValue.min;
+          if (value > min) {
+            counterValue.value = value - 1;
+          }
+        });
+      }
+
+      //delete
+      let deleteItem = document.querySelectorAll(".delete-item");
+      let popupItem = document.querySelectorAll(".popup-main__item");
+
+      for (let i = 0; i < deleteItem.length; i++) {
+        deleteItem[i].addEventListener("click", function() {
+          popupItem[i].style.display = "none";
+        });
+      }
+
       //Range
       var rangeInput2 = document.querySelector('.js-price-range-slider-2');
 
@@ -1251,6 +1283,10 @@
       closeBtn.addEventListener("click", function () {
         sidebar.classList.remove("show-filter");
       });
+
+      //height
+      let computedHeight = getComputedStyle(document.querySelector('.all'));
+      document.querySelector('.popup-bg').style.height = computedHeight.height;
     </script>
   </body>
 </html>

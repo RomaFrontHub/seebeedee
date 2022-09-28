@@ -308,6 +308,7 @@ input[type=number] {
   width: 100%;
 }
 .productDetail-all__main .main-info__buy .btn {
+  font-size: 21px;
   width: 36px;
   height: 36px;
   display: -webkit-box;
