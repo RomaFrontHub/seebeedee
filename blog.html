@@ -89,7 +89,7 @@
             </div>
           </div>
         </div>
-        <div class="popup-main__item">
+        <div class="popup-main__item popup-item-other">
           <img class="delete-item" src="./img/svg/delete.svg" alt="">
           <div class="item-img"><img src="./img/popup.png" alt=""></div>
           <div class="item-desc">
@@ -97,6 +97,82 @@
             <p>Space for a small product description, which goes here and the second line then goes here and fills ...</p>
             <div class="item-desc__bottom">
               <div class="price">36.99 USD</div>
+              <div class="buy-counter">
+                <div class="counter-cell cell-addon">
+                  <button class="btn btn-desc">-</button>
+                </div>
+                <div class="counter-cell cell-input">
+                  <input type="number" class="counter-value" value="1" min="1" max="99">
+                </div>
+                <div class="counter-cell cell-addon">
+                  <button class="btn btn-inc counter-cell">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-main__sale">30% OFF LIMITED TIME ADD-ONS</div>
+        <div class="popup-main__item">
+          <img class="delete-item" src="./img/svg/delete.svg" alt="">
+          <div class="item-img"><img src="./img/popup.png" alt=""></div>
+          <div class="item-desc">
+            <h3>CBD Calming Blend</h3>
+            <p>Space for a small product description, which goes here and the second line then goes here and fills ...</p>
+            <div class="item-desc__bottom">
+              <div class="price price-two">
+                <span>92.50 USD</span>
+                <span>185.00 USD</span>
+              </div>
+              <div class="buy-counter">
+                <div class="counter-cell cell-addon">
+                  <button class="btn btn-desc">-</button>
+                </div>
+                <div class="counter-cell cell-input">
+                  <input type="number" class="counter-value" value="1" min="1" max="99">
+                </div>
+                <div class="counter-cell cell-addon">
+                  <button class="btn btn-inc counter-cell">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-main__item">
+          <img class="delete-item" src="./img/svg/delete.svg" alt="">
+          <div class="item-img"><img src="./img/popup.png" alt=""></div>
+          <div class="item-desc">
+            <h3>CBD Calming Blend</h3>
+            <p>Space for a small product description, which goes here and the second line then goes here and fills ...</p>
+            <div class="item-desc__bottom">
+              <div class="price price-two">
+                <span>92.50 USD</span>
+                <span>185.00 USD</span>
+              </div>
+              <div class="buy-counter">
+                <div class="counter-cell cell-addon">
+                  <button class="btn btn-desc">-</button>
+                </div>
+                <div class="counter-cell cell-input">
+                  <input type="number" class="counter-value" value="1" min="1" max="99">
+                </div>
+                <div class="counter-cell cell-addon">
+                  <button class="btn btn-inc counter-cell">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-main__item">
+          <img class="delete-item" src="./img/svg/delete.svg" alt="">
+          <div class="item-img"><img src="./img/popup.png" alt=""></div>
+          <div class="item-desc">
+            <h3>CBD Calming Blend</h3>
+            <p>Space for a small product description, which goes here and the second line then goes here and fills ...</p>
+            <div class="item-desc__bottom">
+              <div class="price price-two">
+                <span>92.50 USD</span>
+                <span>185.00 USD</span>
+              </div>
               <div class="buy-counter">
                 <div class="counter-cell cell-addon">
                   <button class="btn btn-desc">-</button>
@@ -715,24 +791,28 @@
     <script>
       document.addEventListener('DOMContentLoaded', start);
       function start() {
-        var btnInc = document.querySelector('.btn-inc');
-        var btnDesc = document.querySelector('.btn-desc');
-        var counterValue = document.querySelector('.counter-value');
+        var btnInc = document.querySelectorAll('.btn-inc');
+        var btnDesc = document.querySelectorAll('.btn-desc');
+        var counterValue = document.querySelectorAll('.counter-value');
         // attach event listener
-        btnInc.addEventListener('click', function() {
-          var value = +counterValue.value;
-          var max = + counterValue.max;
-          if (value < max) {
-            counterValue.value = value + 1;
-          }
-        });
-        btnDesc.addEventListener('click', function() {
-          var value = +counterValue.value;
-          var min = + counterValue.min;
-          if (value > min) {
-            counterValue.value = value - 1;
-          }
-        });
+        for (let i = 0; i < counterValue.length; i++) {
+          btnInc[i].addEventListener('click', function() {
+            var value = +counterValue[i].value;
+            var max = + counterValue[i].max;
+            if (value < max) {
+              counterValue[i].value = value + 1;
+            }
+          });
+        }
+        for (let i = 0; i < counterValue.length; i++) {
+          btnDesc[i].addEventListener('click', function() {
+            var value = +counterValue[i].value;
+            var min = + counterValue[i].min;
+            if (value > min) {
+              counterValue[i].value = value - 1;
+            }
+          });
+        }
       }
 
       //delete

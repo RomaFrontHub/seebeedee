@@ -35,9 +35,18 @@ $(document).ready(() => {
   $('.bestSlider__body').slick({
     slidesToShow: 4,
     arrows: true,
+    fade: false,
     prevArrow: '<a href="javascript://" class="sliderArrow sliderArrow--prev"><span class="icon-arrow"></span></a>',
     nextArrow: '<a href="javascript://" class="sliderArrow sliderArrow--next"><span class="icon-arrow"></span></a>',
     responsive: [
+      // {
+      //   breakpoint: 1430,
+      //   settings: {
+      //     slidesToShow: 4,
+      //     appendArrows: $('.bestSlider__arrows')
+      //   }
+      // },
+
       {
         breakpoint: 1200,
         settings: {

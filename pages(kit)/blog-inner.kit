@@ -433,24 +433,28 @@
     <script>
       document.addEventListener('DOMContentLoaded', start);
       function start() {
-        var btnInc = document.querySelector('.btn-inc');
-        var btnDesc = document.querySelector('.btn-desc');
-        var counterValue = document.querySelector('.counter-value');
+        var btnInc = document.querySelectorAll('.btn-inc');
+        var btnDesc = document.querySelectorAll('.btn-desc');
+        var counterValue = document.querySelectorAll('.counter-value');
         // attach event listener
-        btnInc.addEventListener('click', function() {
-          var value = +counterValue.value;
-          var max = + counterValue.max;
-          if (value < max) {
-            counterValue.value = value + 1;
-          }
-        });
-        btnDesc.addEventListener('click', function() {
-          var value = +counterValue.value;
-          var min = + counterValue.min;
-          if (value > min) {
-            counterValue.value = value - 1;
-          }
-        });
+        for (let i = 0; i < counterValue.length; i++) {
+          btnInc[i].addEventListener('click', function() {
+            var value = +counterValue[i].value;
+            var max = + counterValue[i].max;
+            if (value < max) {
+              counterValue[i].value = value + 1;
+            }
+          });
+        }
+        for (let i = 0; i < counterValue.length; i++) {
+          btnDesc[i].addEventListener('click', function() {
+            var value = +counterValue[i].value;
+            var min = + counterValue[i].min;
+            if (value > min) {
+              counterValue[i].value = value - 1;
+            }
+          });
+        }
       }
 
       //delete
