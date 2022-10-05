@@ -125,23 +125,23 @@
           <div class="productDetail-all__main">
             <div class="main-gallery">
               <div class="main-gallery__choice">
-                <img src="./img/product-2.png" alt="">
-                <img src="./img/product-3.png" alt="">
-                <img src="./img/product-4.png" alt="">
-                <img src="./img/product-5.png" alt="">
-                <img src="./img/product-6.png" alt="">
+                <img src="./img/product-2.png" alt="" class="gallery-choice">
+                <img src="./img/product-3.png" alt="" class="gallery-choice">
+                <img src="./img/product-4.png" alt="" class="gallery-choice">
+                <img src="./img/product-5.png" alt="" class="gallery-choice">
+                <img src="./img/product-6.png" alt="" class="gallery-choice">
               </div>
-              <div class="main-gallery__major"><img src="./img/product-1.png" alt=""></div>
+              <div class="main-gallery__major"><img src="./img/product-1.png" alt="" class="gallery-major"></div>
             </div>
             <div class="main-info">
               <h2 class="main-info__title">EXTRA STRENGTH FULL <br> SPECTRUM CBD OIL</h2>
               <div class="itemCard__rating">
                 <div class="stars itemCard__stars">
-                    <span class="icon-star stars__rated"></span>
-                    <span class="icon-star stars__rated"></span>
-                    <span class="icon-star stars__rated"></span>
-                    <span class="icon-star stars__rated"></span>
-                    <span class="icon-star stars__rated"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
                 </div>
                 <span>157 reviews</span>
               </div>
@@ -598,6 +598,32 @@
         contentOne.classList.add("content-hide");
         contentTwo.classList.remove("content-hide");
       });
+
+      //Gallery
+      let galleryChoice = document.querySelectorAll('.gallery-choice');
+      let galleryMajor = document.querySelector('.main-gallery__major');
+
+      galleryChoice[0].addEventListener('mouseover', function() {
+        galleryMajor.innerHTML = '<img src="./img/product-2-big.png" alt="" class="gallery-choice">';
+      });
+      galleryChoice[1].addEventListener('mouseover', function() {
+        galleryMajor.innerHTML = '<img src="./img/product-3-big.png" alt="" class="gallery-choice">';
+      });
+      galleryChoice[2].addEventListener('mouseover', function() {
+        galleryMajor.innerHTML = '<img src="./img/product-4-big.png" alt="" class="gallery-choice">';
+      });
+      galleryChoice[3].addEventListener('mouseover', function() {
+        galleryMajor.innerHTML = '<img src="./img/product-5-big.png" alt="" class="gallery-choice">';
+      });
+      galleryChoice[4].addEventListener('mouseover', function() {
+        galleryMajor.innerHTML = '<img src="./img/product-6-big.png" alt="" class="gallery-choice">';
+      });
+
+      for (let choice of galleryChoice) {
+        choice.addEventListener('mouseout', function() {
+          galleryMajor.innerHTML = '<img src="./img/product-1.png" alt="" class="gallery-choice">';
+        });
+      }
 
       //readMore
       let readMore = document.querySelector(".readMore");

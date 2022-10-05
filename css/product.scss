@@ -36,7 +36,7 @@ input[type=number] {
       left: 0;
       top: 461px;
     }
-    @media (max-width: 1199px) {
+    @media (max-width: 1500px) {
       display: none;
     }
   }
@@ -90,10 +90,17 @@ input[type=number] {
           background: #f9f9f9;
           border-radius: 5px;
           height: fit-content;
+          position: sticky;
+          z-index: 1000;
+          top: 20px;
+          img {
+            border-radius: 5px;
+          }
         }
         @media (max-width: $md) {
           justify-content: space-between;
           &__major {
+            position: static;
             margin-bottom: 24px;
           }
         }
@@ -1163,9 +1170,8 @@ input[type=number] {
         margin-top: 20px;
       }
       &__tabs {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 16px;
+        display: flex;
+        overflow: auto;
         column-gap: 24px;
         .tabs-item-active {
           padding-bottom: 4px!important;
@@ -1175,6 +1181,7 @@ input[type=number] {
           line-height: 20px;
           padding-bottom: 4px;
           width: fit-content;
+          white-space: nowrap;
           span {
             margin-left: 2px;
           }

@@ -335,6 +335,7 @@ input[type=radio]:checked ~ .check::before{
               align-items: center;
               justify-content: space-between;
               position: relative;
+              cursor: pointer;
               &:first-child {
                 pointer-events: none;
                 .content-item__one {
@@ -358,7 +359,7 @@ input[type=radio]:checked ~ .check::before{
                   }
                 }
               }
-              label {
+              span {
                 font-family: 'Poppins';
                 font-weight: 600;
                 font-size: 14px;
@@ -415,6 +416,7 @@ input[type=radio]:checked ~ .check::before{
               display: flex;
               align-items: center;
               justify-content: space-between;
+              cursor: pointer;
               position: relative;
               .content-item__one {
                 display: flex;
@@ -434,7 +436,7 @@ input[type=radio]:checked ~ .check::before{
                   }
                 }
               }
-              label {
+              span {
                 font-family: 'Poppins';
                 font-weight: 600;
                 font-size: 14px;

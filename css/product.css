@@ -41,7 +41,7 @@ input[type=number] {
   left: 0;
   top: 461px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1500px) {
   .productDetail > img {
     display: none;
   }
@@ -114,6 +114,12 @@ input[type=number] {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  position: sticky;
+  z-index: 1000;
+  top: 20px;
+}
+.productDetail-all__main .main-gallery__major img {
+  border-radius: 5px;
 }
 @media (max-width: 767.98px) {
   .productDetail-all__main .main-gallery {
@@ -122,6 +128,7 @@ input[type=number] {
             justify-content: space-between;
   }
   .productDetail-all__main .main-gallery__major {
+    position: static;
     margin-bottom: 24px;
   }
 }
@@ -1312,11 +1319,10 @@ input[type=number] {
     margin-top: 20px;
   }
   .aboutProduct .aboutProduct-all__tabs {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
     -webkit-column-gap: 24px;
        -moz-column-gap: 24px;
             column-gap: 24px;
@@ -1331,6 +1337,7 @@ input[type=number] {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    white-space: nowrap;
   }
   .aboutProduct .aboutProduct-all__tabs .tabs-item span {
     margin-left: 2px;

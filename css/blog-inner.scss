@@ -24,6 +24,36 @@ input[type=number] {
 .mainMenu {
   background: #fff;
 }
+//
+.posts-table-two {
+  display: none;
+  @media (max-width: $md) {
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #F2EBE8;
+    border-radius: 8px;
+    h4 {
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: -0.2px;
+      color: #151515;
+      margin-bottom: 16px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #575757;
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 
 //banner
 .banner {
@@ -211,6 +241,7 @@ input[type=number] {
       }
       .desc-sources {
         margin-bottom: 36px;
+        width: 100%;
         h5 {
           font-weight: 600;
           font-size: 16px;
@@ -419,37 +450,32 @@ input[type=number] {
       padding: 0 15px;
       border-bottom: 0;
       &__desc {
+        align-items: center;
         .desc-adaptive {
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
+          align-items: center;
           margin-bottom: 24px;
-          .select-css {
-            position: relative;
-            &::after {
-              content: "";
-              width: 6px;
-              height: 6px;
-              border:  solid #AD8577;
-              border-width: 2px 0 0 2px;
-              transform: translate(0%, -50%) rotate(225deg);
-              position: absolute;
-              right: 16px;
-              top: 50%;
+          cursor: pointer;
+          padding: 8px 16px;
+          width: 256px;
+          background: #FFFFFF;
+          border: 1px solid #DFDFDF;
+          border-radius: 8px;
+          &__text {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #151515;
+          }
+          &__icon {
+            img {
+              transition: 0.6s;
             }
-            .table-select {
-              width: 256px;
-              height: 36px;
-              background: #FFFFFF;
-              border: 1px solid #DFDFDF;
-              border-radius: 8px;
-              appearance: none;
-              padding: 8px 16px;
-              outline: none;
-              font-weight: 600;
-              font-size: 14px;
-              line-height: 20px;
-              color: #151515;
-              cursor: pointer;
+          }
+          .click-icon {
+            img {
+              transform: rotate(180deg);
             }
           }
         }

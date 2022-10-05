@@ -406,6 +406,7 @@ input[type=radio]:checked ~ .check::before {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  cursor: pointer;
 }
 .checkout-all__main .main-info .step-two__content .content-item:first-child {
   pointer-events: none;
@@ -434,7 +435,7 @@ input[type=radio]:checked ~ .check::before {
     display: block;
   }
 }
-.checkout-all__main .main-info .step-two__content .content-item label {
+.checkout-all__main .main-info .step-two__content .content-item span {
   font-family: "Poppins";
   font-weight: 600;
   font-size: 14px;
@@ -510,6 +511,7 @@ input[type=radio]:checked ~ .check::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
   position: relative;
 }
 .checkout-all__main .main-info .step-three__content .item-diff .content-item__one {
@@ -534,7 +536,7 @@ input[type=radio]:checked ~ .check::before {
     width: 30px;
   }
 }
-.checkout-all__main .main-info .step-three__content .item-diff label {
+.checkout-all__main .main-info .step-three__content .item-diff span {
   font-family: "Poppins";
   font-weight: 600;
   font-size: 14px;
