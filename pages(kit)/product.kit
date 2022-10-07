@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>Document</title>
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
     <link rel="stylesheet" href="css/dropkick.css">
     <link rel="stylesheet" href="fonts/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/tiny-slider.css">
@@ -125,13 +126,21 @@
           <div class="productDetail-all__main">
             <div class="main-gallery">
               <div class="main-gallery__choice">
-                <img src="./img/product-2.png" alt="" class="gallery-choice">
-                <img src="./img/product-3.png" alt="" class="gallery-choice">
-                <img src="./img/product-4.png" alt="" class="gallery-choice">
-                <img src="./img/product-5.png" alt="" class="gallery-choice">
-                <img src="./img/product-6.png" alt="" class="gallery-choice">
+                <img src="./img/product-1.png" alt="" class="gallery-choice-one">
+                <img src="./img/product-2.png" alt="" class="gallery-choice-one">
+                <img src="./img/product-3.png" alt="" class="gallery-choice-two">
+                <img src="./img/product-4.png" alt="" class="gallery-choice-three">
+                <img src="./img/product-5.png" alt="" class="gallery-choice-four">
+                <img src="./img/product-6.png" alt="" class="gallery-choice-five">
               </div>
-              <div class="main-gallery__major"><img src="./img/product-1.png" alt="" class="gallery-major"></div>
+              <div class="main-gallery__major">
+                <img src="./img/product-1.png" alt="" class="gallery-major">
+                <img src="./img/product-2-big.png" alt="" class="gallery-choice-one">
+                <img src="./img/product-3-big.png" alt="" class="gallery-choice-two">
+                <img src="./img/product-4-big.png" alt="" class="gallery-choice-three">
+                <img src="./img/product-5-big.png" alt="" class="gallery-choice-four">
+                <img src="./img/product-6-big.png" alt="" class="gallery-choice-five">
+              </div>
             </div>
             <div class="main-info">
               <h2 class="main-info__title">EXTRA STRENGTH FULL <br> SPECTRUM CBD OIL</h2>
@@ -600,30 +609,39 @@
       });
 
       //Gallery
-      let galleryChoice = document.querySelectorAll('.gallery-choice');
-      let galleryMajor = document.querySelector('.main-gallery__major');
+      // let galleryChoiceOne = document.querySelectorAll('.gallery-choice-one');
+      // let galleryChoiceTwo = document.querySelectorAll('.gallery-choice-two');
+      // let galleryChoiceThree = document.querySelectorAll('.gallery-choice-three');
+      // let galleryChoiceFour = document.querySelectorAll('.gallery-choice-four');
+      // let galleryChoiceFive = document.querySelectorAll('.gallery-choice-five');
 
-      galleryChoice[0].addEventListener('mouseover', function() {
-        galleryMajor.innerHTML = '<img src="./img/product-2-big.png" alt="" class="gallery-choice">';
-      });
-      galleryChoice[1].addEventListener('mouseover', function() {
-        galleryMajor.innerHTML = '<img src="./img/product-3-big.png" alt="" class="gallery-choice">';
-      });
-      galleryChoice[2].addEventListener('mouseover', function() {
-        galleryMajor.innerHTML = '<img src="./img/product-4-big.png" alt="" class="gallery-choice">';
-      });
-      galleryChoice[3].addEventListener('mouseover', function() {
-        galleryMajor.innerHTML = '<img src="./img/product-5-big.png" alt="" class="gallery-choice">';
-      });
-      galleryChoice[4].addEventListener('mouseover', function() {
-        galleryMajor.innerHTML = '<img src="./img/product-6-big.png" alt="" class="gallery-choice">';
-      });
+      // let galleryMajor = document.querySelector('.main-gallery__major');
 
-      for (let choice of galleryChoice) {
-        choice.addEventListener('mouseout', function() {
-          galleryMajor.innerHTML = '<img src="./img/product-1.png" alt="" class="gallery-choice">';
-        });
-      }
+      // for (let galleryChoice of galleryChoiceOne) {
+      //   galleryChoice.addEventListener('click', function() {
+      //     galleryMajor.innerHTML = '<img src="./img/product-2-big.png" alt="" class="gallery-choice">';
+      //   });
+      // };
+      // for (let i = 0; i < galleryChoiceTwo.length; i++) {
+      //   galleryChoiceTwo[i].addEventListener('click', function() {
+      //     galleryMajor.innerHTML = '<img src="./img/product-3-big.png" alt="" class="gallery-choice">';
+      //   });
+      // };
+      // for (let i = 0; i < galleryChoiceThree.length; i++) {
+      //   galleryChoiceThree[i].addEventListener('click', function() {
+      //     galleryMajor.innerHTML = '<img src="./img/product-4-big.png" alt="" class="gallery-choice">';
+      //   });
+      // };
+      // for (let i = 0; i < galleryChoiceFour.length; i++) {
+      //   galleryChoiceFour[i].addEventListener('click', function() {
+      //     galleryMajor.innerHTML = '<img src="./img/product-5-big.png" alt="" class="gallery-choice">';
+      //   });
+      // };
+      // for (let i = 0; i < galleryChoiceFive.length; i++) {
+      //   galleryChoiceFive[i].addEventListener('click', function() {
+      //     galleryMajor.innerHTML = '<img src="./img/product-6-big.png" alt="" class="gallery-choice">';
+      //   });
+      // };
 
       //readMore
       let readMore = document.querySelector(".readMore");

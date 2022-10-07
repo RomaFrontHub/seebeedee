@@ -24,6 +24,65 @@ input[type=number] {
 .mainMenu {
   background: #fff;
 }
+//
+@media (min-width: 768px) and (max-width: 800px) {
+  .productDetail-all__main {
+    .main-gallery__choice {
+      img {
+        height: 40px!important;
+      }
+    }
+  }
+}
+@media (max-width: $md) {
+  .main-gallery__choice {
+    .slick-list {
+      margin: -10px 0;
+      .slick-slide {
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+@media (max-width: $sm) {
+  .main-gallery__choice {
+    .slick-list {
+      margin: 0 -5.5px;
+      .slick-slide {
+        margin: 0 5.5px;
+        height: auto;
+      }
+    }
+  }
+}
+//
+.galleryArrow {
+  &--prev {
+    margin-bottom: 10px;
+    .icon-arrow {
+      transform: rotate(-90deg);
+    }
+  }
+  &--next {
+    margin-top: 10px;
+    .icon-arrow {
+      transform: rotate(90deg);
+    }
+  }
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #E4E4E4;
+  box-shadow: 0px 6px 8px 4px rgba(137, 137, 137, 0.04);
+  .icon-arrow {
+    color: #000;
+    font-size: 12px;
+  }
+}
 //productDetail
 .productDetail {
   >img {
@@ -76,9 +135,12 @@ input[type=number] {
         &__choice {
           display: flex;
           flex-direction: column;
+          align-items: center;
+          max-width: 68px;
           img {
             margin-bottom: 16px;
             border-radius: 5px;
+            height: 59px;
             cursor: pointer;
             &:last-child {
               margin-bottom: 0;
@@ -93,15 +155,26 @@ input[type=number] {
           position: sticky;
           z-index: 1000;
           top: 20px;
+          max-width: 569px;
+          max-height: 570px;
           img {
             border-radius: 5px;
           }
         }
-        @media (max-width: $md) {
-          justify-content: space-between;
+        @media (min-width: 577px) and (max-width: $md) {
+          justify-content: center;
+          &__choice {
+            
+          }
           &__major {
             position: static;
             margin-bottom: 24px;
+            max-width: 400px;
+            max-height: 400px;
+            img {
+              max-width: 400px;
+              max-height: 400px;
+            }
           }
         }
         @media (max-width: $sm) {
@@ -110,6 +183,7 @@ input[type=number] {
           &__choice {
             justify-content: space-between;
             flex-direction: row;
+            max-width: 100%;
             order: 2;
             img {
               margin-bottom: 0;
@@ -589,14 +663,20 @@ input[type=number] {
       &__main {
         justify-content: flex-start;
         .main-gallery {
+          flex: 1;
           &__major {
             margin-left: 22px;
+            width: 300px;
+            flex: 1;
+            img {
+              width: 300px;
+            }
           }
         }
         .main-info {
           margin-left: 20px;
-          min-width: 300px;
-          max-width: 360px;
+          width: 300px;
+          max-width: 420px;
           &__title {
             font-size: 24px;
           }

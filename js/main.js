@@ -145,6 +145,58 @@ $(document).ready(() => {
     ]
   })
 
+  // $('.main-gallery__choice').slick({
+  //   slidesToShow: 4,
+  //   arrows: true,
+  //   prevArrow: '<a href="javascript://" class="galleryArrow galleryArrow--prev"><span class="icon-arrow"></span></a>',
+  //   nextArrow: '<a href="javascript://" class="galleryArrow galleryArrow--next"><span class="icon-arrow"></span></a>',
+  //   vertical:true,
+  //   verticalSwiping:true,
+  //   responsive: [
+      
+  //   ]
+  // })
+
+  $('.main-gallery__major').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.main-gallery__choice'
+  });
+
+  $('.main-gallery__choice').slick({
+      vertical: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.main-gallery__major',
+      focusOnSelect: true,
+      arrows: true,
+      prevArrow: '<a href="javascript://" class="galleryArrow galleryArrow--prev"><span class="icon-arrow"></span></a>',
+      nextArrow: '<a href="javascript://" class="galleryArrow galleryArrow--next"><span class="icon-arrow"></span></a>',
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 4,
+            vertical: true,
+            arrows: true
+            // appendArrows: $('.revSlider__arrows')
+          }
+        },
+
+        {
+          breakpoint: 577,
+          settings: {
+            slidesToShow: 5,
+            vertical: false,
+            arrows: false
+            // appendArrows: $('.revSlider__arrows')
+          }
+        },
+      ]
+  });
+
   $('.faqBlock__heading').click(function(){
     $(this).closest('.faqBlock__item').children('p').slideToggle();
     $(this).children('.faqBlock__plus').toggleClass('faqBlock__plus--minus');
