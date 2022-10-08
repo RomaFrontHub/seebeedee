@@ -193,6 +193,7 @@ input[type=number] {
           }
           &__major {
             margin-left: 0;
+            position: static;
             border-radius: 0;
             margin-bottom: 16px;
           }
@@ -819,6 +820,8 @@ input[type=number] {
             margin-bottom: 24px;
             .buy-buttons {
               margin-left: 0;
+              width: 100%;
+              justify-content: center;
               &__btn {
                 &:first-child {
                   padding: 13.5px 27.5px;

@@ -232,6 +232,7 @@ input[type=number] {
   }
   .productDetail-all__main .main-gallery__major {
     margin-left: 0;
+    position: static;
     border-radius: 0;
     margin-bottom: 16px;
   }
@@ -926,6 +927,10 @@ input[type=number] {
   }
   .productDetail .productDetail-all__main .main-info__buy .buy-buttons {
     margin-left: 0;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .productDetail .productDetail-all__main .main-info__buy .buy-buttons__btn:first-child {
     padding: 13.5px 27.5px;
