@@ -25,6 +25,44 @@ input[type=number] {
   background: #fff;
 }
 //
+.rating_block {
+  width: 100%;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: stretch;
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #909090;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+}
+.rating_block input[type="radio"] {
+  display: none;
+}
+.label_rating {
+  float: right;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/svg/star-2.svg) no-repeat 50% 0;
+  margin-left: 5px;
+  cursor: pointer;
+  &:last-child {
+    margin-left: 0;
+  }
+}
+.rating_block .label_rating:hover,
+.rating_block .label_rating:hover ~ .label_rating,
+.rating_block input[type="radio"]:checked ~ .label_rating
+{
+  background-position: 50% -25px;
+  background: url(../img/svg/star.svg) no-repeat 50% 0;
+}
+//
 @media (min-width: 768px) and (max-width: 800px) {
   .productDetail-all__main {
     .main-gallery__choice {
@@ -423,25 +461,29 @@ input[type=number] {
             border: 1px solid #AD8577;
             border-radius: 16px;
             background-color: #fff;
-            padding: 16px 0;
+            padding: 0;
             .payment-active {
               background-color: #F2EBE8!important;
-              height: 48px;
               label {
                 color: #151515!important;
               }
             }
             .payment-item {
-              padding: 4px 0 4px 23px;
+              padding: 16px 0 10px 24px;
               background-color: transparent;
               display: flex;
               align-items: center;
               position: relative;
               &:first-child {
-                margin-bottom: 5px;
+                margin-bottom: 8px;
+                border-radius: 16px 16px 0 0;
+              }
+              &:nth-child(2) {
+                padding: 10px 0 10px 24px;
               }
               &:last-child {
-                margin-top: 15px;
+                margin-top: 0;
+                padding-bottom: 16px;
               }
               label {
                 font-weight: 600;
@@ -730,9 +772,6 @@ input[type=number] {
           }
           &__payment {
             .payment-wrap {
-              .payment-active {
-                height: 54px;
-              }
               .payment-item {
                 label {
                   font-size: 12px;
@@ -880,9 +919,6 @@ input[type=number] {
             padding-bottom: 24px;
             margin-bottom: 24px;
             .payment-wrap {
-              .payment-active {
-                height: 68px;
-              }
               .payment-item {
                 label {
                   font-size: 12px;
